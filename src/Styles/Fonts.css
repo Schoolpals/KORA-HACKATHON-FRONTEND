@@ -1,0 +1,50 @@
+@import url("https://fonts.fontstorage.com/import/avertademo.css");
+.hero_navbar {
+    font-family: 'Averta Demo';
+    font-weight: 100;
+}
+.hero_text span {
+  font-family: 'Averta Demo';
+  font-weight: 900;
+}
+.fonts-text {
+  font-family: 'Averta Demo';
+}
+
+
+
+.Hero {
+  background-image: url("/assets/Images/Heromap.svg");
+  font-family: 'Averta Demo';
+  background-repeat: no-repeat;
+  background-size: 48vw 90%;
+  background-position: right bottom; 
+}
+.hero_navbar .active {
+    font-style: italic;
+    font-weight: 500;
+  }
+  /* responsive design */
+  @media screen and (max-width:768px) {
+    .Hero {
+      /* background-image: url("/assets/Images/Heromap.svg"); */
+      background: none;
+      font-family: 'Averta Demo';
+      background-repeat: no-repeat;
+      background-size: auto 90%;
+      background-position: right bottom; /* Position the image to the left */
+    }
+  }
+
+  @media  (min-width: 768px)  and (max-width:1024px) {
+    .Hero {
+      /* background-image: url("/assets/Images/Heromap.svg"); */
+      background: none;
+      font-family: 'Averta Demo';
+      background-repeat: no-repeat;
+      background-size: auto 90%;
+      background-position: right bottom; /* Position the image to the left */
+    }
+  }
+
+  

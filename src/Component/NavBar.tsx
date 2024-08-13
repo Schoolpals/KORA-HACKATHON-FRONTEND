@@ -18,7 +18,7 @@ export const NavBar = () => {
             <Link to="about"  className='cursor-pointer'  activeClass="active" spy={true} offset={0} smooth={true} duration={500}>Information</Link>
           </div>
           <div>
-            <Link to="info" className='cursor-pointer'  activeClass="active" spy={true} offset={0} smooth={true} duration={500}>About Us</Link>
+            <Link to="info" className='cursor-pointer'  activeClass="active" spy={true} offset={0} smooth={true} duration={500}>About Kora</Link>
           </div>
         </div>
         <div></div>

@@ -16,7 +16,6 @@ function App() {
       <Routes>
         <Route path='/' element={<SinglePage/>}></Route>
         <Route path='Register' element={<Register/>}></Route>
-
       </Routes>
 
 

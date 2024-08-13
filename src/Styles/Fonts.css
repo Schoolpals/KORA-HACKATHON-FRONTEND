@@ -1,4 +1,5 @@
 @import url("https://fonts.fontstorage.com/import/avertademo.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 .hero_navbar {
     font-family: 'Averta Demo';
     font-weight: 100;
@@ -10,14 +11,23 @@
 .fonts-text {
   font-family: 'Averta Demo';
 }
-
-
+.inter-fonts {
+  font-family: "Inter", sans-serif;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .Hero {
   background-image: url("/assets/Images/Heromap.svg");
   font-family: 'Averta Demo';
   background-repeat: no-repeat;
-  background-size: 48vw 90%;
+  background-size: 48vw 95%;
   background-position: right bottom; 
 }
 .hero_navbar .active {
@@ -27,23 +37,23 @@
   /* responsive design */
   @media screen and (max-width:768px) {
     .Hero {
-      /* background-image: url("/assets/Images/Heromap.svg"); */
-      background: none;
+      background-image: url("/assets/Images/Heromap.svg");
+      /* background: none; */
       font-family: 'Averta Demo';
       background-repeat: no-repeat;
       background-size: auto 90%;
-      background-position: right bottom; /* Position the image to the left */
+      background-position: right bottom; 
     }
   }
 
   @media  (min-width: 768px)  and (max-width:1024px) {
     .Hero {
-      /* background-image: url("/assets/Images/Heromap.svg"); */
-      background: none;
+      background-image: url("/assets/Images/Heromap.svg");
+      /* background: none; */
       font-family: 'Averta Demo';
       background-repeat: no-repeat;
       background-size: auto 90%;
-      background-position: right bottom; /* Position the image to the left */
+      background-position: right bottom; 
     }
   }
 

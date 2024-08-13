@@ -15,7 +15,7 @@ export const SinglePage = () => {
         <Award/>
         <Information/>
         <MultiStepForm/>
-        <AboutKora/>
+        {/* <AboutKora/> */}
         <Footer/>
         
     </div>

@@ -57,11 +57,13 @@ const MultiStepForm = () => {
     };
 
     return (
-        <div className="h-[80vh] pt-[8vw] w-screen bg-[#F7F8FC] multistep-scontainer">
+        <div className="h-[80vh] pt-[8vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
+            <img src="/assets/Images/circuitimage.png" alt="" className="w-[200px] absolute top-[17vw]"/>
             <div className="w-full mx-auto ">
                 <div className="w-[80%] mx-auto  flex flex-col gap-[7vw]">
                     <div className="flex items-center  text-center justify-center"><ProgressBar currentStep={currentStep} totalSteps={steps.length} /></div>
                     <div className=" flex flex-col gap-[4vw]">
+                        
                         <motion.div
                             key={currentStep}
                             initial={{ opacity: 0, scale: 0.9, x: currentStep > prevSteps ? 300 : -100 }}
@@ -89,6 +91,7 @@ const MultiStepForm = () => {
                     </div>
                 </div>
             </div>
+            <img src="/assets/Images/Circuitimage2.png" alt="" className="w-[200px] absolute top-[8vw] right-0"/>
         </div>
     );
 };

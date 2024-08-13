@@ -10,14 +10,14 @@ import MultiStepForm from './MultiStepForm'
 
 export const SinglePage = () => {
   return (
-    <div>
+    <div className='flex gap-[1vw] flex-col'>
         <Hero/>
         <Award/>
         <Information/>
-        <AboutUs/>
+        <MultiStepForm/>
         <AboutKora/>
         <Footer/>
-        <MultiStepForm/>
+        
     </div>
   )
 }

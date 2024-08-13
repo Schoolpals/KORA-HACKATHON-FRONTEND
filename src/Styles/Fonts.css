@@ -14,6 +14,19 @@
 .inter-fonts {
   font-family: "Inter", sans-serif;
 }
+
+#hide {
+  cursor: not-allowed;
+  background-color: gray;  
+}
+
+.multistep-container {
+  background-image: url("/assets/Images/circuitimage.png");
+  background-repeat: no-repeat;
+  background-size: 25% 50%;
+  background-position: left center; 
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -27,7 +40,7 @@
   background-image: url("/assets/Images/Heromap.svg");
   font-family: 'Averta Demo';
   background-repeat: no-repeat;
-  background-size: 48vw 95%;
+  background-size: 48vw 90%;
   background-position: right bottom; 
 }
 .hero_navbar .active {

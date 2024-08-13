@@ -4,20 +4,20 @@ import { useNavigate } from 'react-router'
 export const Information = () => {
   const navigate = useNavigate()
   return (
-    <div className='h-screen w-screen pt-[11vw] justify-center items-center text-black' id='info'>
-      <div className='w-[88%] mx-auto flex items-center'>
-        <div className='flex flex-col gap-[2vw]'>
-          <div>          <div className='fonts-text italic text-[#324154] text-[56px]'>About the hackathon</div>
-            <div className='w-[76%] text-[#324154] text-[18px]'>In an era where financial inclusion and tech advancement drive economic growth, this hackathon offers a unique platform to tackle real challenges in emerging markets. By fostering innovation, practicality, and scalability, we aim to create solutions that improve payment systems and promote financial inclusion across Africa.</div></div>
-          <div>
-            <button className='w-[191px] rounded-[7px] text-white h-[48px] bg-[#2961ED]' onClick={() => navigate("Register")}>
-              View Guideline
-            </button>
-          </div>
+    <div className='h-[52vw] w-screen  pt-[5vw] justify-center items-center text-black' id='info'>
+      <div className='w-[86%] mx-auto flex flex-col text-[3vw] gap-[3vw] fonts-text '>
+        <div className='flex gap-[0vw] flex-col'>
+          <div className='italic text-[#354962]'>Explore the exciting <span className='text-blue-600'>agenda</span> for our <span className='text-blue-600'>hackathon</span> </div>
+          <div className='text-[#354962] text-[20px]'>Tackling real challenges in emerging markets.</div>
         </div>
-        <div>
+        <div className='flex flex-col items-end'>
           <div className=''>
-            <img src="/assets/Images/videoimage.png" alt="imagevideo" className='w-[120vw] h-[40vw]' />
+            <img src="/assets/Images/speakingvideoimages.png" alt="imagevideo" className='w-[120vw] h-[32vw] ' />
+          </div>
+          <div>
+            <button className='w-[14vw] rounded-[7px] text-[1.1vw] text-white h-[3.2vw] bg-[#2961ED]'>
+              View Guidelines
+            </button>
           </div>
         </div>
       </div>

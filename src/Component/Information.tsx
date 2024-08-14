@@ -4,18 +4,18 @@ import { useNavigate } from 'react-router'
 export const Information = () => {
   const navigate = useNavigate()
   return (
-    <div className='h-[52vw] w-screen  pt-[5vw] justify-center items-center text-black' id='info'>
+    <div className='md:h-[52vw] w-screen h-[80vw] justify-center flex my-[3vw] md:my-[3vw] xl:my-[0vw]  xl:py-[0vw] justify-center items-center text-black' id='info'>
       <div className='w-[86%] mx-auto flex flex-col text-[3vw] gap-[3vw] fonts-text '>
         <div className='flex gap-[0vw] flex-col'>
           <div className='italic text-[#354962]'>Explore the exciting <span className='text-blue-600'>agenda</span> for our <span className='text-blue-600'>hackathon</span> </div>
-          <div className='text-[#354962] text-[20px]'>Tackling real challenges in emerging markets.</div>
+          <div className='text-[#354962] md:text-[20px]'>Tackling real challenges in emerging markets.</div>
         </div>
-        <div className='flex flex-col items-end'>
+        <div className='flex flex-col items-end gap-[1vw]'>
           <div className=''>
             <img src="/assets/Images/speakingvideoimages.png" alt="imagevideo" className='w-[120vw] h-[32vw] ' />
           </div>
           <div>
-            <button className='w-[14vw] rounded-[7px] text-[1.1vw] text-white h-[3.2vw] bg-[#2961ED]'>
+            <button className='md:w-[14vw] w-[18vw] md:rounded-[7px] text-[1.6vw] md:text-[1.1vw] text-white xl:h-[3.6vw] md:h-[4.2vw] h-[5vw]  bg-[#2961ED]'>
               View Guidelines
             </button>
           </div>

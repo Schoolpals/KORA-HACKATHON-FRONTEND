@@ -60,6 +60,18 @@
   font-weight: 500;
 }
 
+.form-navigation {
+  display: flex;
+  /* justify-content: space-evenly; */
+  margin-top: 20px;
+  gap: 5vw;
+}
+.form-navigation  button{
+  background-color: #2961ED;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
 /* responsive design */
 @media screen and (max-width:767px) {
   .Hero {
@@ -82,6 +94,12 @@
     height: auto;
     object-fit: cover;
     margin: 0vw 0rem;
+  }
+  .form-navigation  button{
+    background-color: #2961ED;
+    padding: 3vw;
+    font-size: 2vw;
+    border-radius: 50%;
   }
 
   .hero_text {

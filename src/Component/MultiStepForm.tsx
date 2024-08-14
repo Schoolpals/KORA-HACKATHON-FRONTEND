@@ -57,8 +57,8 @@ const MultiStepForm = () => {
     };
 
     return (
-        <div className="h-[80vh] pt-[8vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
-            <img src="/assets/Images/circuitimage.png" alt="" className="w-[200px] absolute top-[17vw]"/>
+        <div className="xl:h-[80vh] md:py-[4rem] py-[8vw] xl:py-[6vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
+            <img src="/assets/Images/circuitimage.png" alt="" className="md:w-[200px] w-[100px] absolute top-[17vw]"/>
             <div className="w-full mx-auto ">
                 <div className="w-[80%] mx-auto  flex flex-col gap-[7vw]">
                     <div className="flex items-center  text-center justify-center"><ProgressBar currentStep={currentStep} totalSteps={steps.length} /></div>
@@ -72,14 +72,14 @@ const MultiStepForm = () => {
                             transition={{ duration: 0.5 }}
                             className="flex gap-[2vw] flex-col justify-center"
                         >
-                            <h1 className="fonts-text italic text-[3vw] text-[#354962]">{steps[currentStep].title}</h1>
+                            <h1 className="fonts-text italic xl:text-[3vw] md:text-[3.5vw] text-[#354962]">{steps[currentStep].title}</h1>
                             <div className="flex items-center justify-center ">
-                                <h2 className="w-[50%] text-[#354962]  mx-auto">{steps[currentStep].description}</h2>
-                                <h1 className="italic fonts-text text-[3.1vw] text-[#2376F3]">{steps[currentStep].date}</h1>
+                                <h2 className="w-[50%] text-[#354962] text-[1.9vw] xl:text-[1.2vw] md:text-[1.5vw]   mx-auto">{steps[currentStep].description}</h2>
+                                <h1 className="italic fonts-text text-[3vw] md:text-[3.6vw] text-[#2376F3]">{steps[currentStep].date}</h1>
                             </div>
 
                         </motion.div>
-                        <div className="form-navigation">
+                        <div className="form-navigation z-50">
                             <button onClick={prevStep} id={currentStep === 0 ? "hide" : undefined}>
                                 <FaChevronLeft  className="text-white"/>
                             </button>
@@ -91,7 +91,7 @@ const MultiStepForm = () => {
                     </div>
                 </div>
             </div>
-            <img src="/assets/Images/Circuitimage2.png" alt="" className="w-[200px] absolute top-[8vw] right-0"/>
+            <img src="/assets/Images/Circuitimage2.png" alt="" className="md:w-[200px] w-[100px] absolute top-[8vw] right-0"/>
         </div>
     );
 };

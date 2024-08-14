@@ -27,10 +27,10 @@ export const Award = () => {
 
   return (
     <div className='h-[59vw] w-screen  text-black   bg-[#F7F8FC] flex flex-col gap-[3vw]' id='award'>
-      <div className='w-[50%] text-[#354962]   mx-auto fonts-text italic text-[20px] py-[0vw]'>
-        <div className='flex items-center gap-[3vw] text-[25px]'>
-          <div className='nowrap'>Sponsored by</div>
-          <div className='overflow-hidden' style={{ width: "35vw" }}>
+      <div className='md:w-[76%] xl:w-[50%] w-[90%] text-[#354962]   mx-auto fonts-text italic text-[20px] py-[0vw]'>
+        <div className='flex items-center md:gap-[3vw] gap-[2vw]  xl:text-[25px]'>
+          <div className='nowrap md:text-[2vw] text-[4.5vw]'>Sponsored by</div>
+          <div className='overflow-hidden xl:w-[35vw] md:w-[50vw] w-[55vw]'>
             <div
               className='flex gap-[6vw]'
               style={{
@@ -43,8 +43,8 @@ export const Award = () => {
                   key={index}
                   src={item.src}
                   alt={item.alt}
-                  width="120px"
-                  height="120px"
+                  width="120vw"
+                  height="120vw"
                   style={{ flexShrink: 0 }} // Prevent image from shrinking
                 />
               ))}

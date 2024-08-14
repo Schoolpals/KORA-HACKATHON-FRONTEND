@@ -1,11 +1,21 @@
 import React from 'react'
+import { FaInstagram } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { RiTwitterXFill } from "react-icons/ri";
 
 export const Footer = () => {
   return (
-    <div className='h-[50vh] pt-[3.5vw] w-screen'>
-        <div className='w-[86%] p-12 text-white h-[40vh] flex flex-col gap-[2vw] mx-auto bg-[#102649] rounded-[20px]'>
-            <div className='fonts-text italic text-[24px]'>Ready to join the Kora Hackathon?</div>
-            <div className='w-[41vw] text-white text-opacity-[0.9]'>Follow the registration guidelines and submit your team details to embark on this exciting journey of innovation and creativity. Click here to register now! </div>
+    <div>
+        <div className='w-[84%] pt-[3vw] mx-auto py-[1vw]'>
+            <div className='flex justify-between items-center'>
+                <img src="/assets/Images/korablack.svg" alt="blackoralog" width="70px"/>
+                <div className='text-[#354962] fonts-text text-[16px]'>KoraHQ © 2024 All right reserved.</div>
+                <div className='flex gap-[1.3vw] justify-evenly'>
+                    <div><FaInstagram/></div>
+                    <div><CiLinkedin/></div>
+                    <div><RiTwitterXFill/></div>
+                </div>
+            </div>
         </div>
     </div>
   )

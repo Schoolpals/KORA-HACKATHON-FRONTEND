@@ -1,36 +1,47 @@
 @import url("https://fonts.fontstorage.com/import/avertademo.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .hero_navbar {
-    font-family: 'Averta Demo';
-    font-weight: 100;
+  font-family: 'Averta Demo';
+  font-weight: 100;
 }
+
 .hero_text span {
   font-family: 'Averta Demo';
   font-weight: 900;
 }
+
 .fonts-text {
   font-family: 'Averta Demo';
 }
+
 .inter-fonts {
   font-family: "Inter", sans-serif;
 }
 
 #hide {
   cursor: not-allowed;
-  background-color: gray;  
+  background-color: gray;
+}
+
+.navbar-container {
+  /* width: 35.3vw; */
+  width: 100px;
+  height: 40px;
 }
 
 .multistep-container {
   background-image: url("/assets/Images/circuitimage.png");
   background-repeat: no-repeat;
   background-size: 25% 50%;
-  background-position: left center; 
+  background-position: left center;
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -41,33 +52,70 @@
   font-family: 'Averta Demo';
   background-repeat: no-repeat;
   background-size: 48vw 90%;
-  background-position: right bottom; 
+  background-position: right bottom;
 }
+
 .hero_navbar .active {
-    font-style: italic;
-    font-weight: 500;
-  }
-  /* responsive design */
-  @media screen and (max-width:768px) {
-    .Hero {
-      background-image: url("/assets/Images/Heromap.svg");
-      /* background: none; */
-      font-family: 'Averta Demo';
-      background-repeat: no-repeat;
-      background-size: auto 90%;
-      background-position: right bottom; 
-    }
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* responsive design */
+@media screen and (max-width:767px) {
+  .Hero {
+    /* background-image: url("/assets/Images/Heromap.svg"); */
+    background: none;
+    font-family: 'Averta Demo';
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: auto 87%;
+    background-position: right bottom;
   }
 
-  @media  (min-width: 768px)  and (max-width:1024px) {
-    .Hero {
-      background-image: url("/assets/Images/Heromap.svg");
-      /* background: none; */
-      font-family: 'Averta Demo';
-      background-repeat: no-repeat;
-      background-size: auto 90%;
-      background-position: right bottom; 
-    }
+  .navbar-container {
+    /* width: 35.3vw; */
+    margin: 7.2vw 0rem;
+    height: 8vw;
+  }
+  .navbar-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0vw 0rem;
   }
 
-  
+  .hero_text {
+    align-items: center;
+    justify-content: center;
+    font-size: 12vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1024px) {
+  .Hero {
+    background-image: url("/assets/Images/Heromap.svg");
+    /* background: none; */
+    font-family: 'Averta Demo';
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: right bottom;
+  }
+  .navbar-container {
+    /* width: 35.3vw; */
+  width: 120px;
+  margin: 4vw 0rem;
+    height: 8vw;
+  }
+  .navbar-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 1vw 0rem;
+  }
+
+  .hero_text {
+    align-items: center;
+    justify-content: center;
+    font-size: 12vw;
+  }
+}

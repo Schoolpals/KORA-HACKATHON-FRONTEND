@@ -8,8 +8,8 @@ export const Footer = () => {
     <div>
         <div className='w-[84%] pt-[3vw] mx-auto py-[1vw]'>
             <div className='flex justify-between items-center'>
-                <img src="/assets/Images/korablack.svg" alt="blackoralog" width="70px"/>
-                <div className='text-[#354962] fonts-text text-[16px]'>KoraHQ © 2024 All right reserved.</div>
+                <img src="/assets/Images/korablack.svg" alt="blackoralog" width="70vw"/>
+                <div className='text-[#354962] fonts-text text-[2vw] md:text-[16px]'>KoraHQ © 2024 All right reserved.</div>
                 <div className='flex gap-[1.3vw] justify-evenly'>
                     <div><FaInstagram/></div>
                     <div><CiLinkedin/></div>

@@ -19,7 +19,7 @@ export const NavBar = () => {
         <img src="/assets/Images/kora 1.svg" alt=""  className='xl:w-[107px] xl:h-[40px]' />
       </div>
       <div className='flex header hidden xl:flex  gap-[3vw] pt-[0.7vw] text-[1.5vw] text-[#F7F8FC] text-opacity-[0.8] font-light hero_navbar'>
-        <div className='italic text-white opacity-1'>
+        <div className=' text-white opacity-1'>
           <Link to="hero" activeClass="active" className='cursor-pointer' spy={true} offset={0} smooth={true} duration={500}>Home</Link>
         </div>
         <div className='cursor-pointer'>

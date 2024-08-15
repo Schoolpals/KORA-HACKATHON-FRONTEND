@@ -19,23 +19,7 @@
     align-items: center;
   }
   
-  .circle {
-    width: 1.4vw;
-    height: 1.4vw;
-    border-radius: 50%;
-    background-color: #C3D9FB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    transition: background-color 0.3s;
-  }
-  
-  .circle.active {
-    background-color: #2376F3;
-    color: white;
-  }
+ 
   
   .checkmark {
     font-size: 18px;

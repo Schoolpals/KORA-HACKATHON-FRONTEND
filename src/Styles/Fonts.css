@@ -1,13 +1,14 @@
 @import url("https://fonts.fontstorage.com/import/avertademo.css");
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .hero_navbar {
-  font-family: 'Averta Demo';
+  font-family: "Fahkwang", sans-serif;
   font-weight: 100;
 }
 
 .hero_text span {
-  font-family: 'Averta Demo';
+  font-family: "Fahkwang", sans-serif;
   font-weight: 900;
 }
 
@@ -17,6 +18,24 @@
 
 .inter-fonts {
   font-family: "Inter", sans-serif;
+}
+
+.circle {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background-color: #C3D9FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.circle.active {
+  background-color: #2376F3;
+  color: white;
 }
 
 #hide {
@@ -46,13 +65,18 @@
     transform: translateX(-100%);
   }
 }
+.fakwa {
+  font-family: "Fahkwang", sans-serif;
+}
 
 .Hero {
   background-image: url("/assets/Images/Heromap.svg");
-  font-family: 'Averta Demo';
+  font-family: "Fahkwang", sans-serif;
   background-repeat: no-repeat;
   background-size: 48vw 90%;
   background-position: right bottom;
+  background: linear-gradient(167.7deg, #060D17 70%, white 30%);
+  
 }
 
 .hero_navbar .active {
@@ -82,8 +106,20 @@
     background-repeat: no-repeat;
     background-size: auto 87%;
     background-position: right bottom;
+    background: linear-gradient(135deg, #060D17 80%, black 20%);
   }
-
+  .circle {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: #C3D9FB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+  }
   .navbar-container {
     /* width: 35.3vw; */
     margin: 7.2vw 0rem;
@@ -117,6 +153,7 @@
     background-repeat: no-repeat;
     background-size: auto 90%;
     background-position: right bottom;
+    background: linear-gradient(167deg, #060D17 70%, black 30%);
   }
   .navbar-container {
     /* width: 35.3vw; */

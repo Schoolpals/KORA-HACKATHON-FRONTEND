@@ -13,9 +13,9 @@ export const SinglePage = () => {
   return (
     <div className='flex gap-[1vw] flex-col'>
         <Hero/>
-        <Award/>
         <Information/>
         <MultiStepForm/>
+        <Award/>
         {/* <AboutKora/> */}
         <Form/>
         <Footer/>

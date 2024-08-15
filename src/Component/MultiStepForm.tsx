@@ -57,29 +57,32 @@ const MultiStepForm = () => {
     };
 
     return (
-        <div className="xl:h-[80vh] h-[85vw] justify-center flex flex-col md:py-[4rem] py-[8vw] xl:py-[6vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
-            <img src="/assets/Images/circuitimage.png" alt="" className="md:w-[200px] w-[100px] top-[37vw] absolute z-30 xl:top-[17vw]" />
+        <div className="xl:h-[90vh] md:h-[60vw] h-[85vw] justify-center flex flex-col md:mt-[0vw] py-[8vw] xl:mt-0 xl:py-[6vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
+            <img src="/assets/Images/circuitimage.png" alt="" className="md:w-[200px] w-[100px] md:top-[0vw] top-[0vw] top-[37vw] absolute z-30 xl:top-[0vw]" />
             <div className="w-full mx-auto ">
-                <div className="w-[80%] mx-auto  flex flex-col gap-[7vw]">
+                <div className="w-[80%] mx-auto  flex  flex-col gap-[7vw]">
+                    <div className="">
+                        <div className="fonts-text italic  text-center top-[4vw] inset-0 absolute text-[6vw] text-[#354962] md:text-[5vw] xl:text-[48px]">Timeline</div>
+                    </div>
                     <div className="flex items-center  text-center justify-center"><ProgressBar currentStep={currentStep} totalSteps={steps.length} steps={steps} /></div>
                     <div className=" flex flex-col gap-[4vw]">
 
                         <motion.div
                             key={currentStep}
-                            initial={{ opacity: 0, scale: 0.9, x: currentStep > prevSteps ? 30 : -100 }}
+                            initial={{ opacity: 0, scale: 0.9, x: currentStep > prevSteps ? 30 : -70 }}
                             animate={{ opacity: 1, scale: 1, x: 0, transition: { duration: 0.3 } }}
                             exit={{ opacity: 0, scale: 0.9, x: -100 }}
                             transition={{ duration: 0.5 }}
                             className="flex gap-[2vw] flex-col justify-center"
                         >
                             <h1 className="fonts-text italic xl:text-[3vw] md:text-[3.5vw] text-[#354962]">{steps[currentStep].title}</h1>
-                            <div className="flex items-center justify-center xl:h-[6vw] ">
-                                <h2 className="w-[50%] text-[#354962] text-[1.9vw] xl:text-[1.2vw] md:text-[1.5vw]  mx-auto">{steps[currentStep].description}</h2>
+                            <div className="flex items-center justify-between xl:h-[6vw] ">
+                                <h2 className="w-[50%] px-4 text-[#354962] text-[1.9vw] xl:text-[1.2vw] md:text-[1.5vw]  ">{steps[currentStep].description}</h2>
                                 <h1 className="italic fonts-text text-[3vw] md:text-[3.6vw]   text-[#2376F3]">{steps[currentStep].date}</h1>
                             </div>
 
                         </motion.div>
-                        <div className="form-navigation ">
+                        <div className="form-navigation z-50 relative">
                             <button onClick={prevStep} id={currentStep === 0 ? "hide" : undefined}>
                                 <FaChevronLeft className="text-white z-50 relative" />
                             </button>
@@ -91,7 +94,7 @@ const MultiStepForm = () => {
                     </div>
                 </div>
             </div>
-            <img src="/assets/Images/Circuitimage2.png" alt="" className="md:w-[200px] w-[100px] absolute top-[15vw] md:top-[8vw] right-0" />
+            <img src="/assets/Images/Circuitimage2.png" alt="" className="md:w-[200px] w-[100px] absolute top-[60vw] md:top-[37vw] xl:top-[34vw] right-0" />
         </div>
     );
 };

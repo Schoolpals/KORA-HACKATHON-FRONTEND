@@ -47,7 +47,7 @@ export const NavBar = () => {
         initial={{ x: '-100%' }}
         animate={{ x: showSidebar ? 0 : '-100%' }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className='sidebar w-[60vw] xl:hidden absolute z-50 top-[25vw] md:top-[18vw] left-0 h-[76%] md:h-[90vw] top-4 bg-white  text-black flex flex-col gap-[1vw]'
+        className='sidebar w-[60vw] xl:hidden absolute z-40 top-[25vw] md:top-[18vw] left-0 h-[80.1%] md:h-[90vw] top-4 bg-white  text-black flex flex-col gap-[1vw]'
       >
         <div className='flex flex-col pt-[10vw] gap-[5vw] px-[6vw] md:text-[3vw]'>
           <Link to="hero" activeClass="active" className='cursor-pointer'  spy={true} offset={0} smooth={true} duration={500}>Home</Link>

@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FaChevronLeft } from "react-icons/fa";
 
 const steps = [
@@ -12,19 +14,19 @@ const steps = [
         date: "August 19, 2024"
     },
     {
-        title: "Product Idea Submission and Filtration",
+        title: "Phase two - development phase",
         description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
-        date: "August 19, 2024"
+        date: "September 2, 2024"
     },
     {
-        title: "Workshop",
+        title: "Phase 3 - Judging",
         description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
-        date: "August 19, 2024"
+        date: "September 16, 2024"
     },
     {
-        title: "Quarter Finals",
+        title: "Final Presentation and Awards",
         description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
-        date: "August 19, 2024"
+        date: "September 23, 2024"
     },
     {
         title: "Finals",
@@ -42,6 +44,14 @@ const steps = [
 const MultiStepForm = () => {
     const [currentStep, setCurrentStep] = useState(0);
     const [prevSteps, setPrevStep] = useState(0);
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+        //   easing: 'ease',
+          once: false,
+        });
+      }, []);
+
     const nextStep = () => {
         if (currentStep < steps.length - 1) {
             setPrevStep(currentStep);
@@ -62,7 +72,7 @@ const MultiStepForm = () => {
             <div className="w-full mx-auto ">
                 <div className="w-[80%] mx-auto  flex  flex-col gap-[7vw]">
                     <div className="">
-                        <div className="fonts-text italic  text-center top-[4vw] inset-0 absolute text-[6vw] text-[#354962] md:text-[5vw] xl:text-[48px]">Timeline</div>
+                        <div className="fonts-text  text-center top-[4vw] inset-0 absolute text-[6vw] text-[#354962] md:text-[5vw] xl:text-[48px]" data-aos="zoom-out">Timeline</div>
                     </div>
                     <div className="flex items-center  text-center justify-center"><ProgressBar currentStep={currentStep} totalSteps={steps.length} steps={steps} /></div>
                     <div className=" flex flex-col gap-[4vw]">
@@ -75,10 +85,10 @@ const MultiStepForm = () => {
                             transition={{ duration: 0.5 }}
                             className="flex gap-[2vw] flex-col justify-center"
                         >
-                            <h1 className="fonts-text italic xl:text-[3vw] md:text-[3.5vw] text-[#354962]">{steps[currentStep].title}</h1>
-                            <div className="flex items-center justify-between xl:h-[6vw] ">
-                                <h2 className="w-[50%] px-4 text-[#354962] text-[1.9vw] xl:text-[1.2vw] md:text-[1.5vw]  ">{steps[currentStep].description}</h2>
-                                <h1 className="italic fonts-text text-[3vw] md:text-[3.6vw]   text-[#2376F3]">{steps[currentStep].date}</h1>
+                            <h1  className="fonts-text text-[4.3vw] xl:text-[3vw] md:text-[3.5vw] text-[#354962]" data-aos={`${currentStep > prevSteps ? "fade-out":"fade-in"}`}>{steps[currentStep].title}</h1>
+                            <div className="flex items-center justify-between xl:h-[6vw] " data-aos={`${currentStep > prevSteps ? "fade-out":"fade-in"}`}>
+                                <h2 className="w-[50%] px-4 text-[#354962] text-[2.1vw] xl:text-[1.2vw] md:text-[1.5vw]"  >{steps[currentStep].description}</h2>
+                                <h1 className=" fonts-text text-[4.3vw] md:text-[3.6vw]   text-[#2376F3]" >{steps[currentStep].date}</h1>
                             </div>
 
                         </motion.div>

@@ -8,6 +8,7 @@ import MultiStepForm from './MultiStepForm'
 import { Form } from './Form'
 import { Footer } from './Footer'
 import { Sponsors } from './Sponsors'
+import { Judges } from './Judges'
 
 export const SinglePage = () => {
   return (
@@ -17,8 +18,9 @@ export const SinglePage = () => {
         <Information/>
         <MultiStepForm/>
         <Award/>
-        {/* <AboutKora/> */}
-        {/* <Form/> */}
+
+        <Judges/>
+        <Form/>
         <Footer/>
         
     </div>

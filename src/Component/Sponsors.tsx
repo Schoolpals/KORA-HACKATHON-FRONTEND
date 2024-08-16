@@ -12,7 +12,7 @@ export const Sponsors = () => {
     const doubledImageArray = [...imageArray, ...imageArray]
     return (
         <div className='flex relative  z-50 justify-center xl:mt-0 md:mt-[2.5vw] mt-[2.5vw] md:gap-[3vw] gap-[2vw] xl:text-[10px] items-center'>
-            <div className='nowrap md:text-[2vw] text-[5vw] xl:text-[2vw] text-opacity-[0.4] text-[#354962] md:text-[3vw]'>Sponsored by</div>
+            <div className='nowrap md:text-[2vw] text-[3vw] xl:text-[1.5vw] text-opacity-[0.4] text-[#354962] md:text-[3vw]'>Sponsored by</div>
             <div className='overflow-hidden  md:w-[50vw] w-[65vw]'>
                 <div
                     className='flex gap-[6vw] '
@@ -26,8 +26,8 @@ export const Sponsors = () => {
                             key={index}
                             src={item.src}
                             alt={item.alt}
-                            width="100vw"
-                            height="100vw"
+                            width="80vw"
+                            height="80vw"
                             style={{ flexShrink: 0 }} // Prevent image from shrinking
                         />
                     ))}

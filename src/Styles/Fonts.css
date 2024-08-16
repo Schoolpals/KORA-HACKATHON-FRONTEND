@@ -1,24 +1,27 @@
 @import url("https://fonts.fontstorage.com/import/avertademo.css");
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @font-face {
   font-family: myFonts;
   src: url("../assets/sf-pro-display/SFPRODISPLAYMEDIUM.OTF");
 }
+
 .hero_navbar {
   font-family: 'Averta Demo';
   font-weight: 100;
 }
 
-.image_display{
-  background-color: transparent;
-  /* transition: 0.5s ease-out; */
+.image_display {
+  background: linear-gradient(to top, #5191f1 44%, #F4AAF1 100%);
+  border-radius: 20px;
+ 
 }
 
 .image_display:hover {
-  background: linear-gradient(to top, #5191f1 44%, #F4AAF1 100%);
+  background: transparent;
   justify-content: center;
-  border-radius: 20px;
+  transition: 1s ease-in-out;
 
 }
 
@@ -85,6 +88,7 @@
     transform: translateX(-100%);
   }
 }
+
 .fakwa {
   font-family: "Fahkwang", sans-serif;
 }
@@ -96,12 +100,17 @@
   background-size: 48vw 90%;
   background-position: right bottom;
   background: linear-gradient(167.7deg, #060D17 70%, white 30%);
-  
+
 }
 
 .hero_navbar .active {
   font-style: italic;
   font-weight: 500;
+}
+
+.right_arrow {
+  padding: 20px ;
+  /* position: absolute !important; */
 }
 
 .form-navigation {
@@ -110,7 +119,8 @@
   margin-top: 20px;
   gap: 5vw;
 }
-.form-navigation  button{
+
+.form-navigation button {
   background-color: #2961ED;
   padding: 1rem;
   border-radius: 50%;
@@ -128,6 +138,7 @@
     background-position: right bottom;
     background: linear-gradient(150deg, #060D17 60%, black 40%);
   }
+
   .circle {
     width: 2vw;
     height: 2vw;
@@ -140,18 +151,21 @@
     color: white;
     transition: background-color 0.3s;
   }
+
   .navbar-container {
     /* width: 35.3vw; */
     margin: 7.2vw 0rem;
     height: 8vw;
   }
+
   .navbar-container img {
     width: 100%;
     height: auto;
     object-fit: cover;
     margin: 0vw 0rem;
   }
-  .form-navigation  button{
+
+  .form-navigation button {
     background-color: #2961ED;
     padding: 3vw;
     font-size: 2vw;
@@ -165,9 +179,9 @@
     font-size: 12vw;
   }
 }
-.right_arrow{
-  padding: 10px !important;
-  /* position: absolute !important; */
+
+.right_arrow {
+
 }
 
 @media (min-width: 540px) and (max-width: 767px) {
@@ -176,14 +190,16 @@
     right: 0vw;
     top: 10vw;
   }
+
   .hero_docs {
     font-size: 3.5vw !important;
   }
+
   .hero_button {
     font-size: 3.5vw !important;
     height: 9vw !important;
     width: 30vw !important;
-    
+
   }
 }
 
@@ -197,12 +213,14 @@
     background-position: right bottom;
     background: linear-gradient(167deg, #060D17 70%, black 30%);
   }
+
   .navbar-container {
     /* width: 35.3vw; */
-  width: 120px;
-  margin: 4vw 0rem;
+    width: 120px;
+    margin: 4vw 0rem;
     height: 8vw;
   }
+
   .navbar-container img {
     width: 100%;
     height: auto;

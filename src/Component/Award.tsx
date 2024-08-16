@@ -39,7 +39,8 @@ export const Award = () => {
         <div data-aos="zoom-out" className="fonts-text    text-center md:text-[6vw] text-[7vw]  xl:text-[56px] text-[#354962]">Grand Awards</div>
         <div className="flex  md:flex-row flex-col items-center justify-center gap-[7vw]  md:gap-[4vw]">
           <div className="">
-            <div className="border-2 rounded-[20px] border-opacity-[0.2] relative border-[#919BC8]   md:w-[28vw] w-[65vw] xl:w-[25vw]" data-aos="flip-left">
+            <div className="border-2 rounded-[20px] border-opacity-[0.2] relative border-[#919BC8]   md:w-[28vw] w-[65vw] xl:w-[25vw]" data-aos="fade-up"
+     data-aos-duration="600">
               <img src="/assets/Images/2ndplaceaward.svg" alt="Silverolgo" className="absolute w-[15vw]  md:w-[9vw] xl:w-[7vw]  -top-8  -right-8" />
               <div className="p-1 rounded-[20px]  bg-gray-100">
                 <div className="bg-gradient-to-t from-[#979799] via-bg-gray-400 to-[#FBFCFF] md:h-[39vw] h-[65vw] xl:h-[29vw] text-black rounded-[20px] border-2">
@@ -78,7 +79,8 @@ export const Award = () => {
             </div>
           </div>
           <div>
-            <div className="border-2 rounded-[20px] border-opacity-[0.2] relative border-[#919BC8] md:w-[28vw] w-[65vw] xl:w-[25vw]" data-aos="flip-down">
+            <div className="border-2 rounded-[20px] border-opacity-[0.2] relative border-[#919BC8] md:w-[28vw] w-[65vw] xl:w-[25vw]" data-aos="fade-up"
+     data-aos-duration="850">
               <img src="/assets/Images/1stplacelogo.svg" alt="Silverolgo" className="absolute w-[15vw]  md:w-[9vw] xl:w-[7vw]  -top-8  -right-8" />
               <div className="p-1 rounded-[20px]  bg-[#CC9F42] bg-opacity-[0.15]">
                 <div className="bg-gradient-to-b from-[#CC9F4299] via-bg-[#874E0199] to-[#874E0199] md:h-[39vw] xl:h-[29vw] h-[65vw] text-black bg-opacity-[0.4] rounded-[20px] border-2">
@@ -123,7 +125,8 @@ export const Award = () => {
             </div>
           </div>
           <div>
-            <div className="border-2 rounded-[20px] border-opacity-[0.2] relative border-[#919BC8] md:w-[28vw] w-[65vw] xl:w-[25vw]" data-aos="flip-right">
+            <div className="border-2 rounded-[20px] border-opacity-[0.2] relative border-[#919BC8] md:w-[28vw] w-[65vw] xl:w-[25vw]" data-aos="fade-up"
+     data-aos-duration="1500">
               <img src="/assets/Images/3rdplacelogo.svg" alt="Silverolgo" className="absolute w-[15vw] md:w-[9vw] xl:w-[7vw]   -top-8  -right-8" />
               <div className="p-1 rounded-[20px] bg-[#C2A07A] bg-opacity-[0.15]">
                 <div className="bg-gradient-to-b from-[#C2A07A80]  via-bg-gray-400 to-[#61513D80]  md:h-[39vw] h-[65vw] xl:h-[29vw] text-black bg-opacity-[0.4] rounded-[20px] border-2">

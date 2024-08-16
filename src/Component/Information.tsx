@@ -4,16 +4,9 @@ import { useNavigate } from 'react-router'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export const Information = () => {
-  const navigate = useNavigate()
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease',
-      once: false,
-    });
-  }, []);
+
   return (
-    <div className='xl:h-[62vw] md:h-[62vw]   w-screen h-[40vh] justify-center flex my-[3vw] md:my-[3vw] xl:my-[0vw]  xl:py-[0vw] justify-center items-center text-black' id='info'>
+    <div className='xl:h-[62vw] md:h-[62vw] overflow-x-hidden  w-screen h-[40vh] justify-center flex my-[3vw] md:my-[3vw] xl:my-[0vw]  xl:py-[0vw] justify-center items-center text-black' id='info'>
       <div className='w-[86%] mx-auto flex flex-col text-[3vw] gap-[2vw] fonts-text '>
         <div className='flex gap-[0vw] flex-col'>
           <div data-aos="slide-right" className='font-bold xl:tracking-wide text-[#354962]'>Explore our exciting agenda</div>

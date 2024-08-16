@@ -12,13 +12,12 @@ import { Judges } from './Judges'
 
 export const SinglePage = () => {
   return (
-    <div className='flex gap-[1vw] flex-col'>
+    <div className='flex gap-[1vw] overflow-x-hidden flex-col'>
         <Hero/>
         <Sponsors/>
         <Information/>
         <MultiStepForm/>
         <Award/>
-
         <Judges/>
         <Form/>
         <Footer/>

@@ -123,7 +123,7 @@ export const Judges = () => {
                             itemClass="carousel-item-padding-40-px"
                         >
                             {imageArray.map((item: any) => (
-                                <div key={item.id} data-aos="flip-up" className='md:m-2  md:p-[2vw] cursor-pointer image_display flex flex-col items-center'>
+                                <div key={item.id} data-aos="fade-up" className='md:m-2  md:p-[2vw] cursor-pointer image_display flex flex-col items-center'>
                                     <img className='md:w-[21vw]  rounded-[10px]' src={item.src} alt={item.alt} />
                                     <div className='text-center text-[18px]'>{item.name}</div>
                                     <div className='text-center text-[14px]'>{item.position}</div>

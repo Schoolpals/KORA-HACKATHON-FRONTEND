@@ -9,7 +9,7 @@ export const Information = () => {
     <div className='xl:h-[62vw] md:h-[62vw] overflow-x-hidden  w-screen h-[40vh] justify-center flex my-[3vw] md:my-[3vw] xl:my-[0vw]  xl:py-[0vw] justify-center items-center text-black' id='info'>
       <div className='w-[86%] mx-auto flex flex-col text-[3vw] gap-[2vw] fonts-text '>
         <div className='flex gap-[0vw] flex-col'>
-          <div data-aos="slide-right" className='font-bold xl:tracking-wide text-[#354962]'>Explore our exciting agenda</div>
+          <div data-aos="fade-up" className='font-bold xl:tracking-wide text-[#354962]'>Explore our exciting agenda</div>
           {/* <div className='text-[#354962] md:text-[20px]'>Tackling real challenges in emerging markets.</div> */}
         </div>
         <div className='flex flex-col items-end gap-[1vw]'>

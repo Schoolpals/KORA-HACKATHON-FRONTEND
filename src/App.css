@@ -29,7 +29,7 @@
   }
   
   .line {
-    width: 15vw;
+    width: 25vw;
     height: 4px;
     background-color: #C3D9FB;
     transition: background-color 0.3s;

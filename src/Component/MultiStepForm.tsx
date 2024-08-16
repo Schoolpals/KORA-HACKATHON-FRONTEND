@@ -28,16 +28,16 @@ const steps = [
         description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
         date: "September 23, 2024"
     },
-    {
-        title: "Finals",
-        description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
-        date: "August 19, 2024"
-    },
-    {
-        title: "Registration",
-        description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
-        date: "August 19, 2024"
-    }
+    // {
+    //     title: "Finals",
+    //     description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
+    //     date: "August 19, 2024"
+    // },
+    // {
+    //     title: "Registration",
+    //     description: "Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.",
+    //     date: "August 19, 2024"
+    // }
 ];
 
 

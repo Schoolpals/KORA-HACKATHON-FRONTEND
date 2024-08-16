@@ -13,13 +13,13 @@
 }
 
 .image_display {
-  background: linear-gradient(to top, #5191f1 44%, #F4AAF1 100%);
+background-color: transparent;
   border-radius: 20px;
  
 }
 
 .image_display:hover {
-  background: transparent;
+  background: linear-gradient(to top, #5191f1 44%, #F4AAF1 100%);
   justify-content: center;
   transition: 1s ease-in-out;
 

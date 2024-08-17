@@ -120,7 +120,7 @@ export const Register = () => {
                                     {currentMemberIndex === 0 ? "Team Lead" : `Member ${currentMemberIndex}`}
                                 </div>
                                 <div className='w-[85%] mx-auto flex flex-col items-start gap-[1.6vw]'>
-                                    <label className='text-[#354962] text-left text-[2vw]  md:text-[1.7vw] font-bold'>Name</label>
+                                    <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1.2vw] font-bold'>Name</label>
                                     <input
                                         required
                                         type='text'
@@ -128,7 +128,7 @@ export const Register = () => {
                                         value={members[currentMemberIndex]?.name}
                                         onChange={(e) => handleMemberChange('name', e.target.value)}
                                     />
-                                    <label className='text-[#354962] text-left text-[2vw]  md:text-[1.7vw] font-bold'>Role</label>
+                                    <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Role</label>
                                     <input
                                         required
                                         type='text'
@@ -136,7 +136,7 @@ export const Register = () => {
                                         value={members[currentMemberIndex]?.role}
                                         onChange={(e) => handleMemberChange('role', e.target.value)}
                                     />
-                                    <label className='text-[#354962] text-left text-[2vw]  md:text-[1.7vw] font-bold'>Email Address</label>
+                                    <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Email Address</label>
                                     <input
                                         required
                                         type='email'
@@ -150,7 +150,7 @@ export const Register = () => {
                                 <div className='w-[85%] outline-none mx-auto flex inter-fonts flex-col items-end'>
                                     <button type='button' className='text-black gap-2 flex items-center xl:text-[1.2vw] text-[1.5vw] md:text-[1.7vw] text-[#354962]' onClick={addMember}>
                                         <span className='text-[#354962]'>+</span>
-                                        <span className='text-[#354962] text-[2vw] '>Add member</span>
+                                        <span className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold '>Add member</span>
                                     </button>
                                 </div>
                             )}

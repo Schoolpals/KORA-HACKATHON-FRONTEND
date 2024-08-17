@@ -138,6 +138,9 @@ background-color: transparent;
     background-position: right bottom;
     background: linear-gradient(150deg, #060D17 60%, black 40%);
   }
+  .guidelines_items {
+    align-items: center;
+  }
 
   .circle {
     width: 2vw;
@@ -190,6 +193,9 @@ background-color: transparent;
     right: 0vw;
     top: 10vw;
   }
+  .guidelines_items {
+    align-items: center;
+  }
 
   .hero_docs {
     font-size: 3.5vw !important;
@@ -214,6 +220,9 @@ background-color: transparent;
     background: linear-gradient(167deg, #060D17 70%, black 30%);
   }
 
+  .guidelines_items {
+    align-items: center;
+  }
   .navbar-container {
     /* width: 35.3vw; */
     width: 120px;

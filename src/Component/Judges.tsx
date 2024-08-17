@@ -85,7 +85,7 @@ export const Judges = () => {
 
     return (
         <div className='w-screen xl:h-[88vh] h-[70vh] md:h-[47vh] flex justify-center items-center relative'>
-            <div className='w-[90%] mx-auto flex flex-col gap-[6vw] relative'>
+            <div className='w-[90%]  mx-auto flex flex-col gap-[20vw] md:gap-[6vw] relative'>
                 <div className='flex items-center   justify-center ' >
                     <button
                         data-aos="fade-left"
@@ -104,8 +104,8 @@ export const Judges = () => {
 
                 </div>
                 {/* Container for Buttons */}
-                <div>
-                    <div className='absolute xl:top-[19vw] md:top-[25vw] top-[40vw] left-0 z-10 ' >
+                <div className='flex items-center justify-center'>
+                    <div className='absolute left-0 z-10 ' >
                         <CustomLeftArrow onClick={handlePrev} />
                     </div>
                     <div className='w-[75%] mx-auto transition-opacity duration-200'>
@@ -124,14 +124,14 @@ export const Judges = () => {
                         >
                             {imageArray.map((item: any) => (
                                 <div key={item.id} data-aos="fade-up" className='md:m-2  md:p-[2vw] cursor-pointer image_display flex flex-col items-center'>
-                                    <img className='md:w-[21vw]  rounded-[10px]' src={item.src} alt={item.alt} />
-                                    <div className='text-center text-[18px]'>{item.name}</div>
-                                    <div className='text-center text-[14px]'>{item.position}</div>
+                                    <img className='rounded-[10px]' src={item.src} alt={item.alt} />
+                                    <div className='text-center md:text-[1.8vw] text-[3.7vw] xl:text-[18px]'>{item.name}</div>
+                                    <div className='text-center md:text-[1vw] text-[2.7vw]  text-[14px]'>{item.position}</div>
                                 </div>
                             ))}
                         </Carousel>
                     </div>
-                    <div className='absolute xl:top-[19vw] md:top-[25vw] top-[40vw] right-0 z-10'>
+                    <div className='absolute right-0 z-10'>
                         <CustomRightArrow onClick={handleNext} />
                     </div>
                 </div>

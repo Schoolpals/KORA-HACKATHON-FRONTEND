@@ -84,7 +84,7 @@ export const Register = () => {
                         <div className='text-center text-[#354962] text-[3vw] md:text-[1.4vw] font-bold'>Register Now</div>
                         <form className='flex flex-col gap-[2vw]'>
                             <div className='w-[85%] mx-auto flex flex-col items-start gap-[0.4vw]'>
-                                <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] font-bold'>Team Name</label>
+                                <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Team Name</label>
                                 <input
                                     required
                                     type='text'
@@ -94,7 +94,7 @@ export const Register = () => {
                                 />
                             </div>
                             <div className='w-[85%] mx-auto flex flex-col items-start gap-[0.4vw]'>
-                                <label className='text-[#354962] text-left text-[2vw] md:text-[1vw] font-bold'>Project Description</label>
+                                <label className='text-[#354962] text-left text-[2vw]  md:text-[1.7vw] xl:text-[1vw]  font-bold'>Project Description</label>
                                 <textarea
                                     required
                                     className='w-[100%] md:h-[9vw] border-[1px] border-black rounded-[2px] mx-auto border-2 outline-none h-[12vw] text-[1.7vw] xl:text-[1vw] text-black p-[0.4vw] md:rounded-[5px]'

@@ -170,9 +170,9 @@ export const Register = () => {
                <div className='fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex items-center justify-center'>
                  <div className='  xl:w-[60%] w-[90%] md:w-[80%] rounded-[3rem] mx-auto bg-[#F7F8FC] md:rounded-[1.5rem] inter-fonts'>
                     <div className='xl:h-[38vw]  justify-center gap-[2vw] overflow-y-auto md:h-[36vw] h-[45vw]   w-full bg-[#F7F8FC] shadow-lg pt-[3vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
-            <div className=' text-[#354962] text-[2vw] w-[80%] mx-auto flex  gap-[1vw] justify-center  font-bold'>
-                <div><MdErrorOutline className='text-yellow-800' /></div>
-                <div className='xl:text-[1.3vw] md:text-[1.4vw] text-[1.7vw]  font-normal w-full  mx-auto'>Before completing your registration please take a moment to review the information ensure that all details are complete</div>
+            <div className=' text-[#354962] text-[2vw] w-[80%] mx-auto border-[1.8px] border-opacity-50 border-[#2961ED] p-[1.6vw] flex  rounded-[2vw] gap-[1vw] justify-center  font-bold'>
+                <div><MdErrorOutline className='text-[#2961ED] text-opacity-60' /></div>
+                <div className='xl:text-[1.1vw] md:text-[1.6vw] text-[1.5vw]  font-normal w-full uppercase mx-auto'>Before completing your registration please take a moment to review the information ensure that all details are complete</div>
             </div>
             <div className='flex flex-col gap-[2vw]  justify-center  w-[80%] mx-auto '>
                 <div className='justify-between relative  text-[#354962]  text-[1.5vw] md:text-[1.1vw] gap-[3vw] items-center  pb-[1.3vw] flex font-medium'>
@@ -302,14 +302,16 @@ export const Register = () => {
                                     We’re excited to have you join us on this journey of innovation and creativity.
                                 </div>
                                 <div className='w-[85%] mx-auto flex flex-col items-center'>
+                                <a href="">
                                     <button
                                         type='submit'
                                         className='w-[15vw] md:rounded-[7px] rounded-0 text-white md:text-[1.6vw] text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'
                                         
                                     >
-                                        <a href="">Dismiss</a>
+                                        Dismiss
                                         
                                     </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

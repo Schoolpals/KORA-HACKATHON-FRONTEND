@@ -16,7 +16,7 @@ export const NavBar = () => {
   return (
     <div className='w-full  mx-auto xl:pt-[2rem] flex items-center justify-between'>
       <div className='navbar-container'>
-        <img src="/assets/Images/kora 1.svg" alt=""  className='xl:w-[107px] xl:h-[40px]' />
+        <img src="/assets/Images/kora 1.svg" alt="" className='xl:w-[107px] xl:h-[40px]' />
       </div>
       <div className='flex header hidden xl:flex  gap-[3vw] pt-[0.7vw] text-[1.5vw] text-[#F7F8FC] text-opacity-[0.8] font-light hero_navbar'>
         <div className=' text-white opacity-1'>
@@ -26,20 +26,20 @@ export const NavBar = () => {
           <Link to="award" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>Awards</Link>
         </div>
         <div>
-          <Link to="about" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>Information</Link>
+          <Link to="info" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>Information</Link>
         </div>
         <div>
-          <Link to="info" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>About Kora</Link>
+          <div className='cursor-pointer'> <a href="https://www.korahq.com/" target='_blank'>About Kora</a></div>
         </div>
       </div>
       <div className='xl:hidden'>
-       {
-        showSidebar? (
-          <ImCross className='sidebar-icon cursor-pointer' size={25} onClick={handleToggleshowSidebar} />
-        ) : (
-          <GiHamburgerMenu className='sidebar-icon cursor-pointer' size={30} onClick={handleToggleshowSidebar} />
-        )
-       }
+        {
+          showSidebar ? (
+            <ImCross className='sidebar-icon cursor-pointer' size={25} onClick={handleToggleshowSidebar} />
+          ) : (
+            <GiHamburgerMenu className='sidebar-icon cursor-pointer' size={30} onClick={handleToggleshowSidebar} />
+          )
+        }
       </div>
       <div className='hidden xl:block'></div>
 
@@ -50,10 +50,12 @@ export const NavBar = () => {
         className='sidebar w-[60vw] xl:hidden absolute z-40 top-[25vw] md:top-[18vw] left-0 h-[80.1%] md:h-[90vw] top-4 bg-white  text-black flex flex-col gap-[1vw]'
       >
         <div className='flex flex-col pt-[10vw] gap-[5vw] px-[6vw] md:text-[3vw]'>
-          <Link to="hero" activeClass="active" className='cursor-pointer'  spy={true} offset={0} smooth={true} duration={500}>Home</Link>
-          <Link to="award" className='cursor-pointer' activeClass="active"  spy={true} offset={0} smooth={true} duration={500}>Awards</Link>
-          <Link to="about" className='cursor-pointer' activeClass="active"  spy={true} offset={0} smooth={true} duration={500}>Information</Link>
-          <Link to="info" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>About kora</Link>
+          <Link to="hero" activeClass="active" className='cursor-pointer' spy={true} offset={0} smooth={true} duration={500}>Home</Link>
+          <Link to="award" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>Awards</Link>
+          <Link to="about" className='cursor-pointer' activeClass="active" spy={true} offset={0} smooth={true} duration={500}>Information</Link>
+          <div>
+            <div className='cursor-pointer'> <a href="https://www.korahq.com/" target='_blank'>About Kora</a></div>
+          </div>
         </div>
       </motion.div>
     </div>

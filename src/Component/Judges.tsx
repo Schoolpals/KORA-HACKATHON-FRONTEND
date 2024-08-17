@@ -84,7 +84,7 @@ export const Judges = () => {
     const imageArray = activeSet === 'mentors' ? ImImageArrayMentors : ImImageArrayBoards;
 
     return (
-        <div className='w-screen xl:h-[88vh] h-[70vh] md:h-[47vh] flex justify-center items-center relative'>
+        <div className='w-screen xl:h-[88vh] h-[70vh] md:h-[57vw] flex justify-center items-center relative'>
             <div className='w-[90%]  mx-auto flex flex-col gap-[20vw] md:gap-[6vw] relative'>
                 <div className='flex items-center   justify-center ' >
                     <button
@@ -124,7 +124,7 @@ export const Judges = () => {
                         >
                             {imageArray.map((item: any) => (
                                 <div key={item.id} data-aos="fade-up" className='md:m-2  md:p-[2vw] cursor-pointer image_display flex flex-col items-center'>
-                                    <img className='rounded-[10px]' src={item.src} alt={item.alt} />
+                                    <img className='rounded-[10px] md:w-[40vw] w-[47vw] ' src={item.src} alt={item.alt} />
                                     <div className='text-center md:text-[1.8vw] text-[3.7vw] xl:text-[18px]'>{item.name}</div>
                                     <div className='text-center md:text-[1vw] text-[2.7vw]  text-[14px]'>{item.position}</div>
                                 </div>

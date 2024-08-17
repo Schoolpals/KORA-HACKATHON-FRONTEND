@@ -161,7 +161,7 @@ export const Award = () => {
         </div>
         <div data-aos="fade-up" className="flex w-[97%] relative xl:-top-[3vw]  md:-top-[2vw]  mx-auto gap-[1vw]">
           <FaStar className="text-[#354962]"/>
-          <div className="xl:w-[50%] md:w-[67%] font-thin  text-center md:text-left fonts-text text-[#354962]">Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.</div>
+          <div className="xl:w-[50%] md:w-[67%] xl:text-[1.3vw] md:text-[2vw] text-[3.5vw] font-thin  text-center md:text-left fonts-text text-[#354962]">Registration for our prestigious challenge opens 19th of August and closes 21st August, don't miss your chance to claim the crown. This is your moment to shine and make your mark.</div>
         </div>
       </div>
 

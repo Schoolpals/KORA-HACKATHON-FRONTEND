@@ -196,7 +196,9 @@ background-color: transparent;
   .guidelines_items {
     align-items: center;
   }
-
+ .ject-small {
+  border-radius: 2px !important;
+ }
   .hero_docs {
     font-size: 3.5vw !important;
   }

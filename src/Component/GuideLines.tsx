@@ -3,7 +3,9 @@ import { Link } from 'react-scroll';
 import {motion} from 'framer-motion'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigate } from 'react-router';
 export const GuideLines = () => {
+    const naviagte = useNavigate()
     return (
         <div className='h-screen w-screen'>
             <div className='w-[100%]  mx-auto'>
@@ -14,7 +16,7 @@ export const GuideLines = () => {
                      animate={{ opacity: 1,x:0,transition: {duration : 0.5} }}
                      exit={{ opacity:0,x:0}}
                      className='text-[#324154] xl:fixed flex flex-col gap-[3vw] md:gap-[0] fonts-text' >
-                        <div className='xl:text-[1.5vw] md:text-[3vw] text-[4vw]'>Rules and Guidelines</div>
+                        <div className='xl:text-[1.5vw] md:text-[3vw] text-[4vw] cursor-pointer' onClick={() => naviagte(-1)}>Rules and Guidelines</div>
                         <div className='flex xl:flex-col flex xl:items-left guidelines_items justify-center mt-[3vw] xl:gap-[1vw] md:gap-[4vw] gap-[4vw] '>
                             <div className='xl:text-[1.1vw] md:text-[2.5vw] text-[3.5vw]'>On this page</div>
                             <div className='xl:text-[1vw] md:text-[2.3vw] text-[3.2vw] text-[#2376F3]' ><Link to="Rules" className='cursor-pointer' activeClass="active" spy={true} offset={-100} smooth={true} duration={500}>Rules</Link></div>

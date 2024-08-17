@@ -7,6 +7,11 @@
   src: url("../assets/sf-pro-display/SFPRODISPLAYMEDIUM.OTF");
 }
 
+input {
+  white-space: nowrap;
+}
+
+
 .hero_navbar {
   font-family: 'Averta Demo';
   font-weight: 100;

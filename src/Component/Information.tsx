@@ -17,7 +17,7 @@ export const Information = () => {
             <img loading="lazy" src="/assets/Images/speakingvideoimages.png" alt="imagevideo" className='md:w-[120vw] w-full h-[42vw] xl:h-[60vh]  md:h-[36vw] ' />
           </div>
           <div >
-            <button className='md:w-[23vw] w-[21vw] md:rounded-[7px]  text-[2vw] md:text-[2.3vw] text-white xl:h-[3.6vw] md:h-[6.2vw] h-[7vw]  bg-[#2961ED]' onClick={() => navigate ("/Regulation")}>
+            <button className='md:w-[23vw] xl:w-[14vw] w-[23vw] md:rounded-[7px] xl:text-[1.4vw] text-[2.5vw] md:text-[2.3vw] text-white xl:h-[3.6vw] md:h-[6.2vw] h-[7vw]  bg-[#2961ED]' onClick={() => navigate ("/Regulation")}>
               View Guidelines
             </button>
           </div>

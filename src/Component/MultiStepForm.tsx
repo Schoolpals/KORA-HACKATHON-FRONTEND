@@ -67,7 +67,7 @@ const MultiStepForm = () => {
     };
 
     return (
-        <div className="xl:h-[90vh] md:h-[60vw] h-[85vw] justify-center flex flex-col md:mt-[0vw] py-[8vw] xl:mt-0 xl:py-[6vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
+        <div className="xl:h-[90vh] md:h-[60vw] h-[85vw] my-[8vw] md:my-0 justify-center flex flex-col md:mt-[0vw] py-[8vw] xl:mt-0 xl:py-[6vw] w-screen bg-[#F7F8FC] relative multistep-scontainer">
             <img src="/assets/Images/circuitimage.png" alt="" className="md:w-[200px] w-[100px] md:top-[0vw] top-[0vw] top-[37vw] absolute z-30 xl:top-[0vw]" />
             <div className="w-full mx-auto ">
                 <div className="w-[80%] mx-auto  flex  flex-col gap-[7vw]">

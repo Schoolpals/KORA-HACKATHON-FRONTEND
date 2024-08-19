@@ -12,7 +12,8 @@ export const Register = () => {
     const [editTeamMode, setTeamEditMode] = useState<any>(null); 
     const [editValue, setEditValue] = useState<any>('');
     const [editTeamvalue, setEditTeamvalue] = useState<any>('');
-
+    const AccessToken = localStorage.getItem('token')
+    console.log(AccessToken)
     const handleMemberChange = (field:string, value:string) => {
         const newMembers:any = [...members];
         newMembers[currentMemberIndex][field] = value;
@@ -33,7 +34,8 @@ export const Register = () => {
                 }),
             })
             const result = await res.json();
-            console.log(result)
+            console.log(result.token)
+            localStorage.setItem('token', result.token)
             if (!res.ok) {
                 throw new Error('Failed to register team');
             }else {
@@ -51,6 +53,7 @@ export const Register = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${AccessToken}`,
                 },
                 body: JSON.stringify({
                     teamLeadEmail: members[currentMemberIndex].email,
@@ -129,8 +132,8 @@ export const Register = () => {
         <div>
             {currentPage === 0 && (
                 <div className='h-full sticky w-[24vw] mx-auto bg-[#F7F8FC] rounded-[1.5rem] inter-fonts'>
-                    <div className='xl:h-[38vw] md:h-[45vw] h-[65vw] justify-center xl:w-full w-[50vw] md:w-[38vw] bg-[#F7F8FC] shadow-lg pt-[1vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
-                        <div className='text-center text-[#354962] text-[3vw] md:text-[1.4vw] font-bold'>Register Now</div>
+                    <div className='xl:h-[39vw] md:h-[52vw] h-[65vw] justify-center xl:w-[30vw] w-[50vw] md:w-[38vw] bg-[#F7F8FC] shadow-lg pt-[1vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
+                        <div className='text-center text-[#354962] text-[3vw] md:text-[2vw] font-bold'>Register Now</div>
                         <form onSubmit={FirstFormSumit} className='flex flex-col gap-[2vw]'>
                             <div className='w-[85%] mx-auto flex flex-col items-start gap-[0.4vw]'>
                                 <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Team Name</label>
@@ -152,7 +155,7 @@ export const Register = () => {
                                 />
                             </div>
                             <div className='w-[85%] mx-auto flex flex-col items-center'>
-                                <button type='submit' className='w-[40vw] md:w-[17vw] md:rounded-[7px] text-white md:text-[1.6vw] text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'>
+                                <button type='submit' className='w-[40vw] md:w-full md:rounded-[7px] text-white md:text-[1.6vw] text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'>
                                     {loading ? "Loading..." : "Next"}
                                 </button>
                             </div>
@@ -162,7 +165,7 @@ export const Register = () => {
             )}
             {currentPage === 1 && (
                 <div className='h-full sticky w-[24vw] mx-auto bg-[#F7F8FC] rounded-[1.5rem] inter-fonts'>
-                    <div className='xl:h-[38vw] md:h-[45vw] h-[65vw] justify-center xl:w-full w-[50vw] md:w-[38vw] bg-[#F7F8FC] shadow-lg pt-[1vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
+                    <div className='xl:h-[39vw] md:h-[45vw] h-[65vw] justify-center xl:w-[30vw] w-[50vw] md:w-[38vw] bg-[#F7F8FC] shadow-lg pt-[1vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
                         <form onSubmit={handleMemberForm} className='flex flex-col gap-2 md:gap-[2vw]'>
                             <div>
                                 <div className='text-center text-[#354962] xl:pb-4 text-[2vw] md:text-[1.9vw] font-bold'>
@@ -203,7 +206,7 @@ export const Register = () => {
                             </div>
                             {currentMemberIndex < 3 && (
                                 <div className='w-[85%] outline-none mx-auto flex relative  inter-fonts flex-col items-end'>
-                                    <button type='button' className='text-black absolute -top-3 top-0 gap-2 flex items-center xl:text-[1.2vw] text-[1.5vw] md:text-[1.7vw] text-[#354962]' onClick={addMember}>
+                                    <button type='button' className='text-black absolute -top-2 top-0 gap-2 flex items-center xl:text-[1.2vw] text-[1.5vw] md:text-[1.7vw] text-[#354962]' onClick={addMember}>
                                         <span className='text-[#354962]'>+</span>
                                         <span className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold '>Add member</span>
                                     </button>
@@ -212,7 +215,7 @@ export const Register = () => {
                             <div className='w-[85%] mx-auto flex flex-col items-center'>
                                 <button
                                     type='submit'
-                                    className='md:w-[17vw] w-[40vw] ject-small md:rounded-[7px] text-white md:text-[1.6vw]  text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'
+                                    className='md:w-full w-[40vw] ject-small md:rounded-[7px] text-white md:text-[1.6vw]  text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'
                                     
                                 >
                                     Next

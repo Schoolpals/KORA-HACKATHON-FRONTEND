@@ -105,7 +105,7 @@ background-color: transparent;
   background-size: 48vw 90%;
   background-position: right bottom;
   background: linear-gradient(167.7deg, #060D17 70%, white 30%);
-
+  height: 54dvw !important;
 }
 
 .hero_navbar .active {
@@ -114,7 +114,7 @@ background-color: transparent;
 }
 
 .right_arrow {
-  padding: 20px ;
+  padding: 15px !important;
   /* position: absolute !important; */
 }
 
@@ -142,6 +142,7 @@ background-color: transparent;
     background-size: auto 87%;
     background-position: right bottom;
     background: linear-gradient(150deg, #060D17 60%, black 40%);
+    height: 90dvh !important;
   }
   .guidelines_items {
     align-items: center;
@@ -155,8 +156,8 @@ background-color: transparent;
   
   }
   .circle {
-    width: 3vw;
-    height: 3vw;
+    width: 4vw;
+    height: 4vw;
     border-radius: 50%;
     background-color: #C3D9FB;
     display: flex;
@@ -196,17 +197,20 @@ background-color: transparent;
 }
 
 .right_arrow {
- padding: 10px;
+ padding: 15px !important;
 }
 
 @media (min-width: 540px) and (max-width: 767px) {
   .phone_image {
     position: relative;
-    right: 0vw;
-    top: 10vw;
+    right: 7vw !important;
+    top: 12vw;
   }
   .guidelines_items {
     align-items: center;
+  }
+  .text_lead{
+    line-height: 10vw !important;
   }
  .ject-small {
   border-radius: 2px !important;
@@ -232,6 +236,7 @@ background-color: transparent;
     background-size: auto 90%;
     background-position: right bottom;
     background: linear-gradient(167deg, #060D17 70%, black 30%);
+    height: 110dvw !important;
   }
  
 
@@ -266,3 +271,30 @@ background-color: transparent;
     font-size: 12vw;
   }
 }
+
+@media (min-width: 1350px) {
+  .Hero {
+    background-image: url("/assets/Images/Heromap.svg");
+    font-family: 'Averta Demo';
+    background-repeat: no-repeat;
+    background-size: 48vw 90%;
+    background-position: right bottom;
+    background: linear-gradient(167.7deg, #060D17 70%, white 30%);
+    height: 69dvw !important;
+  }
+  .hero_text {
+    height: 50vw !important;
+  }
+
+  .hero_text span {
+    font-size: 7vw !important;
+}
+.hero_text2{
+  line-height: 5rem !important;
+}
+.phone_image img {
+  height: 770px !important;
+  width: 30vw;
+}
+}
+

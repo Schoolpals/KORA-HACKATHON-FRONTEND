@@ -64,19 +64,19 @@ export const Judges = () => {
     };
     const responsive = {
         superLargeDesktop: {
-            breakpoint: { max: 4000, min: 1024 },
+            breakpoint: { max: 4000, min: 1025 },
             items: 3
         },
         desktop: {
             breakpoint: { max: 1024, min: 768 },
-            items: 3
+            items: 2
         },
         tablet: {
             breakpoint: { max: 768, min: 464 },
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 550, min: 0 },
             items: 1
         }
     };
@@ -124,7 +124,7 @@ export const Judges = () => {
                         >
                             {imageArray.map((item: any) => (
                                 <div key={item.id} data-aos="fade-up" className='md:m-2  md:p-[2vw] cursor-pointer image_display flex flex-col items-center'>
-                                    <img className='rounded-[10px] md:w-[40vw] w-[47vw] ' src={item.src} alt={item.alt} />
+                                    <img className='rounded-[10px] xl:w-[40vw] md:w-[59vw] w-[47vw] ' src={item.src} alt={item.alt} />
                                     <div className='text-center md:text-[1.8vw] text-[3.7vw] xl:text-[18px]'>{item.name}</div>
                                     <div className='text-center md:text-[1vw] text-[2.7vw]  text-[14px]'>{item.position}</div>
                                 </div>

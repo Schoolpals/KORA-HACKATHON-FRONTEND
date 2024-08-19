@@ -296,5 +296,8 @@ background-color: transparent;
   height: 770px !important;
   width: 30vw;
 }
+.info {
+  height: 72vw !important;
+}
 }
 

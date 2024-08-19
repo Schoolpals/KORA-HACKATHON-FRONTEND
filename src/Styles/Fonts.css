@@ -147,9 +147,16 @@ background-color: transparent;
     align-items: center;
   }
 
+  .image_display:hover {
+    /* background: linear-gradient(to top, #5191f1 44%, #F4AAF1 100%); */
+    background: none;
+    justify-content: center;
+    transition: 1s ease-in-out;
+  
+  }
   .circle {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     border-radius: 50%;
     background-color: #C3D9FB;
     display: flex;
@@ -189,7 +196,7 @@ background-color: transparent;
 }
 
 .right_arrow {
-
+ padding: 10px;
 }
 
 @media (min-width: 540px) and (max-width: 767px) {
@@ -225,6 +232,15 @@ background-color: transparent;
     background-size: auto 90%;
     background-position: right bottom;
     background: linear-gradient(167deg, #060D17 70%, black 30%);
+  }
+ 
+
+  .image_display:hover {
+    /* background: linear-gradient(to top, #5191f1 44%, #F4AAF1 100%); */
+    background: none;
+    justify-content: center;
+    transition: 1s ease-in-out;
+  
   }
 
   .guidelines_items {

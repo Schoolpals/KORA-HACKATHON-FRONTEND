@@ -87,8 +87,8 @@ const MultiStepForm = () => {
                         >
                             <h1  className="fonts-text text-[4.3vw] xl:text-[3vw] md:text-[3.5vw] text-[#354962]" data-aos={`${currentStep > prevSteps ? "fade-out":"fade-in"}`}>{steps[currentStep].title}</h1>
                             <div className="flex items-center justify-between xl:h-[6vw] " data-aos={`${currentStep > prevSteps ? "fade-out":"fade-in"}`}>
-                                <h2 className="w-[50%] px-4 text-[#354962] text-[2.1vw] xl:text-[1.2vw] md:text-[1.5vw]"  >{steps[currentStep].description}</h2>
-                                <h1 className=" fonts-text text-[4.3vw] md:text-[3.6vw]   text-[#2376F3]" >{steps[currentStep].date}</h1>
+                                <h2 className="md:w-[50%] px-4 text-[#354962] text-[2.9vw] xl:text-[1.2vw] md:text-[1.5vw]"  >{steps[currentStep].description}</h2>
+                                <h1 className=" md:relative absolute right-0 top-[25vw] md:top-0 fonts-text text-[4.3vw] md:text-[3.6vw]   text-[#2376F3]" >{steps[currentStep].date}</h1>
                             </div>
 
                         </motion.div>

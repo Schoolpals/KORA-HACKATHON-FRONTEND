@@ -7,7 +7,7 @@ export const Register = () => {
     const [members, setMembers] = useState([{ name: '', role: '', email: '' }]);
     const [teamName, setTeamName] = useState('');
     const [projectDescription, setProjectDescription] = useState('');
-    
+    const [loading,setLoading] = useState(false)
     const [editMode, setEditMode] = useState<any>(null);
     const [editTeamMode, setTeamEditMode] = useState<any>(null); 
     const [editValue, setEditValue] = useState<any>('');
@@ -18,7 +18,58 @@ export const Register = () => {
         newMembers[currentMemberIndex][field] = value;
         setMembers(newMembers);
     };
-
+    const FirstFormSumit = async  (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setLoading(true);
+        try {
+            const res = await fetch('https://kora-hackathon.onrender.com/kora/register-team', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    teamName,
+                    description: projectDescription,
+                }),
+            })
+            const result = await res.json();
+            console.log(result)
+            if (!res.ok) {
+                throw new Error('Failed to register team');
+            }else {
+                setCurrentPage(1)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const handleMemberForm = async (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true)
+        try {
+            const res = await fetch("https://kora-hackathon.onrender.com/kora/register-team-info",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    teamLeadEmail: members[currentMemberIndex].email,
+                    nameOfMember: members[currentMemberIndex].name,
+                    role: members[currentMemberIndex].role
+                }),
+            })
+            const result = await res.json();
+            console.log(result)
+            if (!res.ok) {
+                throw new Error('Failed to register member');
+            }
+            else{
+               setCurrentPage(2)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     const addMember = () => {
         if (currentMemberIndex < 3) {
             setCurrentMemberIndex(currentMemberIndex + 1);
@@ -54,7 +105,6 @@ export const Register = () => {
         setProjectDescription('');
         setTeamName('');
     };
-
     const handleEditClick = (field: keyof typeof members[number], index: number) => {
         setEditMode({ field, index });
         setEditValue(members[index][field] || '');
@@ -81,7 +131,7 @@ export const Register = () => {
                 <div className='h-full sticky w-[24vw] mx-auto bg-[#F7F8FC] rounded-[1.5rem] inter-fonts'>
                     <div className='xl:h-[38vw] md:h-[45vw] h-[65vw] justify-center xl:w-full w-[50vw] md:w-[38vw] bg-[#F7F8FC] shadow-lg pt-[1vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
                         <div className='text-center text-[#354962] text-[3vw] md:text-[1.4vw] font-bold'>Register Now</div>
-                        <form className='flex flex-col gap-[2vw]'>
+                        <form onSubmit={FirstFormSumit} className='flex flex-col gap-[2vw]'>
                             <div className='w-[85%] mx-auto flex flex-col items-start gap-[0.4vw]'>
                                 <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Team Name</label>
                                 <input
@@ -102,8 +152,8 @@ export const Register = () => {
                                 />
                             </div>
                             <div className='w-[85%] mx-auto flex flex-col items-center'>
-                                <button type='button' className='w-[40vw] md:w-[17vw] md:rounded-[7px] text-white md:text-[1.6vw] text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]' onClick={() => setCurrentPage(1)}>
-                                    Next
+                                <button type='submit' className='w-[40vw] md:w-[17vw] md:rounded-[7px] text-white md:text-[1.6vw] text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'>
+                                    {loading ? "Loading..." : "Next"}
                                 </button>
                             </div>
                         </form>
@@ -113,21 +163,24 @@ export const Register = () => {
             {currentPage === 1 && (
                 <div className='h-full sticky w-[24vw] mx-auto bg-[#F7F8FC] rounded-[1.5rem] inter-fonts'>
                     <div className='xl:h-[38vw] md:h-[45vw] h-[65vw] justify-center xl:w-full w-[50vw] md:w-[38vw] bg-[#F7F8FC] shadow-lg pt-[1vw] flex flex-col gap-[3vw] md:rounded-[10px]'>
-                        <form className='flex flex-col gap-2 md:gap-[2vw]'>
+                        <form onSubmit={handleMemberForm} className='flex flex-col gap-2 md:gap-[2vw]'>
                             <div>
-                                <div className='text-center text-[#354962] text-[2vw] md:text-[1.9vw] font-bold'>
+                                <div className='text-center text-[#354962] xl:pb-4 text-[2vw] md:text-[1.9vw] font-bold'>
                                     {currentMemberIndex === 0 ? "Team Lead" : `Member ${currentMemberIndex}`}
                                 </div>
-                                <div className='w-[85%] mx-auto flex flex-col items-start gap-[1.6vw]'>
-                                    <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1.2vw] font-bold'>Name</label>
-                                    <input
+                                <div className='w-[85%] mx-auto flex flex-col items-start gap-[1.5vw]'>
+                                   <div className='w-[100%] mx-auto flex flex-col items-start gap-[0.7vw]'>
+                                     <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Name</label>
+                                       <input
                                         required
                                         type='text'
                                         className='w-[100%] mx-auto border-[1px] md:h-[4vw] xl:h-[3vw] h-[6vw] border-black outline-none text-black xl:text-[1vw] md:text-[1.5vw]  text-[1.7vw] md:p-[0.4vw] rounded-[2px] md:rounded-[5px]'
                                         value={members[currentMemberIndex]?.name}
                                         onChange={(e) => handleMemberChange('name', e.target.value)}
-                                    />
-                                    <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Role</label>
+                                       />
+                                   </div>
+                                  <div className='w-[100%] mx-auto flex flex-col items-start gap-[0.7vw]'>
+                                  <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Role</label>
                                     <input
                                         required
                                         type='text'
@@ -135,7 +188,9 @@ export const Register = () => {
                                         value={members[currentMemberIndex]?.role}
                                         onChange={(e) => handleMemberChange('role', e.target.value)}
                                     />
-                                    <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Email Address</label>
+                                  </div>
+                                <div className='w-[100%] mx-auto flex flex-col items-start gap-[0.7vw]'>
+                                <label className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold'>Email Address</label>
                                     <input
                                         required
                                         type='email'
@@ -144,10 +199,11 @@ export const Register = () => {
                                         onChange={(e) => handleMemberChange('email', e.target.value)}
                                     />
                                 </div>
+                                </div>
                             </div>
                             {currentMemberIndex < 3 && (
-                                <div className='w-[85%] outline-none mx-auto flex inter-fonts flex-col items-end'>
-                                    <button type='button' className='text-black gap-2 flex items-center xl:text-[1.2vw] text-[1.5vw] md:text-[1.7vw] text-[#354962]' onClick={addMember}>
+                                <div className='w-[85%] outline-none mx-auto flex relative  inter-fonts flex-col items-end'>
+                                    <button type='button' className='text-black absolute -top-3 top-0 gap-2 flex items-center xl:text-[1.2vw] text-[1.5vw] md:text-[1.7vw] text-[#354962]' onClick={addMember}>
                                         <span className='text-[#354962]'>+</span>
                                         <span className='text-[#354962] text-left text-[2vw] md:text-[1.7vw] xl:text-[1vw] font-bold '>Add member</span>
                                     </button>
@@ -155,9 +211,9 @@ export const Register = () => {
                             )}
                             <div className='w-[85%] mx-auto flex flex-col items-center'>
                                 <button
-                                    type='button'
+                                    type='submit'
                                     className='md:w-[17vw] w-[40vw] ject-small md:rounded-[7px] text-white md:text-[1.6vw]  text-[1.6vw] xl:text-[1vw] h-[4vw] md:h-[3vw] bg-[#2961ED]'
-                                    onClick={handleSubmit}
+                                    
                                 >
                                     Next
                                 </button>
@@ -201,7 +257,6 @@ export const Register = () => {
                                 </div>
                             </div>
                         ))}</div>
-
                     </div>
                     <div className=' text-[#354962] text-[1.5vw] md:text-[1.2vw] w-full justify-between items-center flex font-medium font-medium fonts-text'>
                         <div className='text-[#354962] md:text-[1.5vw] xl:text-[1.3vw] text-[2vw] font-medium'>Email Address:</div>
@@ -211,10 +266,7 @@ export const Register = () => {
                                     {member.email}
                                 </div>
                                 <div className='absolute right-4'>
-                                <FaRegEdit
-                                            onClick={() => handleEditClick('email', index)}
-                                            className='text-[#2961ED] text-[1.5vw] cursor-pointer'
-                                        />
+                                    <FaRegEdit onClick={() => handleEditClick('email', index)} className='text-[#2961ED] text-[1.5vw] cursor-pointer'/>
                                 </div>
                             </div>
                         ))}</div>

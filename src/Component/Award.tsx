@@ -35,7 +35,7 @@ export const Award = () => {
 
   return (
     <div className='xl:h-[59vw] md:h-[80vw] w-screen  md:pb-0 pb-[8vw]  text-black   bg-white flex flex-col gap-[3vw]' id='award'>
-      <div className="xl:w-[86%] md:w-[90%]  mx-auto  md:mt-[3vw] mt-[9vw] flex flex-col gap-[20vw] md:gap-[6vw]">
+      <div className="xl:w-[86%] md:w-[90%]  mx-auto  md:mt-[3vw] mt-[9vw] flex flex-col gap-[14vw] md:gap-[6vw]">
         <div data-aos="zoom-out" className="fonts-text    text-center md:text-[6vw] text-[7vw]  xl:text-[56px] text-[#354962]">Grand Awards</div>
         <div className="flex  md:flex-row flex-col items-center justify-center gap-[19vw]  md:gap-[4vw]">
           <div className="">
